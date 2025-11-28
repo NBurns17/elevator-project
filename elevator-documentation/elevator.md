@@ -19,3 +19,6 @@ Provide code that simulates an elevator. You are free to use any language.
 * CLI
   * Easiest to implement
   * Less user-friendly
+* React
+  * Meant for web application development
+  * More user-friendly

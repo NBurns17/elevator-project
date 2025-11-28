@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -13,7 +14,9 @@ public class Main {
         System.out.printf(WELCOME_TEXT);
         System.out.printf("\n\n");
         System.out.printf(EXPLANATION);
-        String startingFloor = scanner.nextInt()
+
+        int startingFloor = InputPanel.getStartingFloor();
+        ArrayList floorList = InputPanel
 
         for (int i = 1; i <= 5; i++) {
             //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint

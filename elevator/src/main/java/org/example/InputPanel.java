@@ -1,8 +1,6 @@
 package org.example;
 
-import java.util.ArrayList;
 import java.util.InputMismatchException;
-import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -28,8 +26,8 @@ public class InputPanel {
         while (startingFloor == null) {
             try {
                 startingFloor = scanner.nextInt();
-            }
-            catch (InputMismatchException e) {
+                scanner.nextLine();  // Consume the \n input
+            } catch (InputMismatchException e) {
                 System.out.print("\n");
                 System.out.printf(START_FLOOR_MISINPUT);
             }
@@ -63,12 +61,12 @@ public class InputPanel {
 
             floors = new int[floorStrings.length];
 
+            // Convert the strings to integers, or retry
             try {
                 for (int i = 0; i < floorStringsLength; i++) {
                     floors[i] = Integer.parseInt(floorStrings[i]);
                 }
-            }
-            catch (NumberFormatException e) {
+            } catch (NumberFormatException e) {
                 System.out.printf(FLOOR_LIST_MISINPUT);
                 continue;
             }

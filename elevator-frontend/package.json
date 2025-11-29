@@ -9,13 +9,61 @@
     "electron": "electron .",
     "build": "vite build",
     "preview": "vite preview",
-    "package": "electron-packager .\\out"
+    "package": "electron-builder"
+  },
+  "build": {
+    "appId": "com.example.elevator-frontend",
+    "productName": "elevator-frontend",
+    "directories": {
+      "output": "dist_electron"
+    },
+    "files": [
+      "dist/**/*",
+      "main.js"
+    ],
+    "extraResources": {
+      "from": "dist/",
+      "to": "app/dist/"
+    },
+    "mac": {
+      "target": "dmg",
+      "category": "public.app-category.productivity"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb",
+        "tar.gz"
+      ],
+      "category": "Utility",
+      "icon": "build/icons"
+    }
   },
   "devDependencies": {
-    "vite": "^7.2.4"
+    "electron-builder": "^26.0.12",
+    "vite": "^7.2.4",
+    "electron": "^39.2.4"
   },
   "dependencies": {
-    "@electron/packager": "^19.0.1",
-    "electron": "^39.2.4"
+    "@vitejs/plugin-react": "^5.1.1",
+    "electron-is-dev": "^3.0.1"
   }
 }

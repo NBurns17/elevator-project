@@ -1,0 +1,21 @@
+{
+  "name": "elevator-frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vite",
+    "electron": "electron .",
+    "build": "vite build",
+    "preview": "vite preview",
+    "package": "electron-packager .\\out"
+  },
+  "devDependencies": {
+    "vite": "^7.2.4"
+  },
+  "dependencies": {
+    "@electron/packager": "^19.0.1",
+    "electron": "^39.2.4"
+  }
+}

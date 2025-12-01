@@ -1,0 +1,27 @@
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  text-align: center;
+}
+
+.panel {
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  background-color: gray;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 3em;
+  height: 5em;
+}
+
+p {
+  margin: 0;
+}

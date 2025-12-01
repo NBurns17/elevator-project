@@ -1,0 +1,21 @@
+.elevator {
+  padding: 1rem;
+}
+
+.elevatorDoors {
+  width: 20rem;
+  height: 22rem;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  background-color: gray;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+}
+
+.elevatorDivider {
+  height: 100%;
+  width: 2px;
+  background-color: black;
+}

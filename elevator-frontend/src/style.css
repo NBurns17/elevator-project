@@ -35,6 +35,20 @@ h1 {
   line-height: 1.1;
 }
 
+input[type=number] {
+  width: 1.5em;
+  height: 1.5em;
+  text-align: center;
+  -moz-appearance: textfield;
+  margin: 0;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button{
+  appearance: none;
+  margin: 0;
+}
+
 #app {
   max-width: 1280px;
   display: flex;

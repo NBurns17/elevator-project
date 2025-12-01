@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
 import Counter from "./counter";
@@ -8,12 +8,14 @@ import ElevatorPanel from "./components/elevator-panel/elevatorPanel";
 // import './src/style.css'
 
 const App = () => {
+  const minFloors = 1;
+  const [numFloors, setNumFloors] = useState(minFloors);
 
   return (
     <div id="app">
       <TravelResult/>
-      <Elevator/>
-      <ElevatorPanel/>
+      <Elevator numFloors={numFloors}/>
+      <ElevatorPanel minValue={minFloors} onChange={setNumFloors}/>
     </div>
   )
 }

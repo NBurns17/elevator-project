@@ -1,6 +1,6 @@
 import style from './elevator.module.css'
 
-const Elevator = () => {
+const Elevator = ({numFloors, floorArray}) => {
 
   return (
     <div className={style.elevator}>
@@ -10,7 +10,7 @@ const Elevator = () => {
         <div className={style.elevatorDivider}/>
       </div>
       <h3>Floors to visit: </h3>
-      <input type='number' min={0}/>
+      <input type='text' min={0}/>
     </div>
   )
 }

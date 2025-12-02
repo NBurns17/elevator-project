@@ -21,8 +21,8 @@ public class ElevatorController {
     }
 
     @PostMapping("/trip")
-    ResponseEntity<ElevatorTrip> completeTrip(@RequestBody ElevatorTrip elevatorTrip) {
+    ResponseEntity<Integer> completeTrip(@RequestBody ElevatorTrip elevatorTrip) {
         log.info("Request to create group: {}", elevatorTrip);
-        return ResponseEntity.ok().body(elevatorTrip);
+        return ResponseEntity.ok().body(valueOf(3));
     }
 }

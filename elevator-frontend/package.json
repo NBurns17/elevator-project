@@ -11,6 +11,7 @@
     "preview": "vite preview",
     "package": "electron-builder"
   },
+  "proxy": "http://localHost:8080",
   "build": {
     "appId": "com.example.elevator-frontend",
     "productName": "elevator-frontend",
